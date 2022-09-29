@@ -18,13 +18,21 @@ public class EVA2_1_LISTA_SIMPLE {
         // TODO code application logic here
         
         LISTA miLISTA = new LISTA();
+        //int[] arreglo= new int[1000000];
+        
+        for (int i = 0; i < 1000000; i++) {  //O(N^2)
+            miLISTA.add(1000);
+        }
+        System.out.println("CONTEO DE NODOS: " + miLISTA.tamaLISTA());
+        
+        
         miLISTA.add(10);
         miLISTA.add(20);
         miLISTA.add(30);
         miLISTA.add(40);
         miLISTA.add(50);
         miLISTA.add(60);
-        miLISTA.imprimir();
+     //   miLISTA.imprimir();  
     }
     
 }
