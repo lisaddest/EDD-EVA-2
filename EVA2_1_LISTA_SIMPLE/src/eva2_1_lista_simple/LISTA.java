@@ -27,8 +27,9 @@ public class LISTA {
                 System.out.print(temp.getValor() + " - ");
                 temp= temp.getSiguiente();
     }
+            System.out.println("");
     }
-   
+    
     //AGREGAR UN NODO AL FINAL DE LA LISTA
     //SOLUCION 1: O(N)
     public void add(int valor){
@@ -63,11 +64,30 @@ public class LISTA {
             }   
             return cont;
     }
-    
 
-    public void agregarEn(int valor, int pos){
+    public void insertarEn(int valor, int pos) throws Exception{
+        int cantNODOS = tamaLISTA();
         //QUE DEBEMOS HACER?  INSERTAR EN UNA POSICION NO VALIDA
-        //POSICIONES NEGATIVAS
-        //POSICIONES MAYORES A LA CANTIDAD DEL ELEMENTOS
-    }
-}
+        
+        if(pos < 0){ //POSICIONES NEGATIVAS
+            throw new Exception("No puede insertarse un nodo en una posicion negativa");
+        } else if(pos>cantNODOS) { //POSICIONES MAYORES A LA CANTIDAD DEL ELEMENTOS
+            throw new Exception(pos + " no es una posicion valida en la lista");
+            
+        } else{
+                    NODO nuevoNODO =new NODO(valor);
+                 if(pos ==0){ //insertar la inicio de la lista
+                    nuevoNODO.setSiguiente(inicio);
+                    inicio = nuevoNODO;                  
+               }else{
+                     NODO temp=inicio;
+                     int cont=0;
+                     while(cont < (pos - 1)){
+                        temp=temp.getSiguiente();
+                        cont++;
+                     }
+                     System.out.print(temp.getValor() + " - ");
+                     }
+                 }
+            }
+        }
