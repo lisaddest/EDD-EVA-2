@@ -32,13 +32,13 @@ public class EVA2_1_LISTA_SIMPLE {
         miLISTA.add(40); //3
         miLISTA.add(50); //4
         miLISTA.add(60); //5
-        
+         miLISTA.imprimir();
         try{
-        miLISTA.insertarEn(70, 0);
+        miLISTA.insertarEn(70, 3);
         }catch (Exception ex) {
             ex.printStackTrace();
         }
-        miLISTA.imprimir();
+       
      //   miLISTA.imprimir();  
     }
 }
