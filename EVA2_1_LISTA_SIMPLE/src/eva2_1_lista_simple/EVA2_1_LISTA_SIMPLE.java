@@ -38,7 +38,8 @@ public class EVA2_1_LISTA_SIMPLE {
         }catch (Exception ex) {
             ex.printStackTrace();
         }
-       
-     //   miLISTA.imprimir();  
+        miLISTA.imprimir();  
+        miLISTA.vaciarLISTA();
+        miLISTA.imprimir();
     }
 }
