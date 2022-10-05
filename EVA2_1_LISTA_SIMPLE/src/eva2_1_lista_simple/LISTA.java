@@ -20,14 +20,18 @@ public class LISTA {
         this.fin=null;
     }
     
-    public void imprimir(){
+    public void imprimir(){ 
+        if(inicio==null)
+            System.out.println("LISTA VACIA");
+        else{
         NODO temp = inicio;
         //COMO MUEVO A TEMP?
             while(temp !=null) {
                 System.out.print(temp.getValor() + " - ");
                 temp= temp.getSiguiente();
-    }
+            }
             System.out.println("");
+        } 
     }
     
     //AGREGAR UN NODO AL FINAL DE LA LISTA
@@ -86,8 +90,26 @@ public class LISTA {
                         temp=temp.getSiguiente();
                         cont++;
                      }
-                     System.out.print(temp.getValor() + " - ");
+                     nuevoNODO.setSiguiente(temp.getSiguiente());
+                     temp.setSiguiente(nuevoNODO);
                      }
                  }
             }
+    public void vaciarLISTA(){
+        inicio=null;
+        fin=null;
+    }
+    public void borrarEn(int pos) throws Exception {
+    int cantNODOS = tamaLISTA();
+        //QUE DEBEMOS HACER?  INSERTAR EN UNA POSICION NO VALIDA
+        
+        if(pos < 0){ //POSICIONES NEGATIVAS
+            throw new Exception("No puede insertarse un nodo en una posicion negativa");
+        } else if(pos>=cantNODOS) { //POSICIONES MAYORES A LA CANTIDAD DEL ELEMENTOS
+            throw new Exception(pos + " no es una posicion valida en la lista");
+            
+        } else{
+            
         }
+    }
+}
