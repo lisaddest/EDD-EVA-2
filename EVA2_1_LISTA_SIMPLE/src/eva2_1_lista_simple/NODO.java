@@ -14,10 +14,9 @@ public class NODO {
     private int valor;
     private NODO siguiente;
 
-     // POR DEFAULT, UN NUEVO NODO VA AL FINAL DE LA LISTA
+    // POR DEFAULT, UN NUEVO NODO VA AL FINAL DE LA LISTA
     // EL FINAL DE LA LISTA SE INDICA CON UN NULL
     //SIGUIENTE SIEMPRE VA A SER NULL
-    
     
     public NODO() {
         this.siguiente = null;
@@ -43,6 +42,4 @@ public class NODO {
     public void setSiguiente(NODO siguiente) {
         this.siguiente = siguiente;
     }
-    
-  
 }
