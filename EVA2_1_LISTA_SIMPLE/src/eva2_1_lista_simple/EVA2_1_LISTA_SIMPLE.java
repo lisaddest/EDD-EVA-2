@@ -5,6 +5,9 @@
  */
 package eva2_1_lista_simple;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Ana Paulina villegas
@@ -33,13 +36,17 @@ public class EVA2_1_LISTA_SIMPLE {
         miLISTA.add(50); //4
         miLISTA.add(60); //5
          miLISTA.imprimir();
-        try{
+       /* try{
         miLISTA.insertarEn(70, 3);
         }catch (Exception ex) {
             ex.printStackTrace();
-        }
+        }*/
         miLISTA.imprimir();  
-        miLISTA.vaciarLISTA();
-        miLISTA.imprimir();
+        try {
+            miLISTA.borrarEn(0);
+        } catch (Exception ex) {
+            Logger.getLogger(EVA2_1_LISTA_SIMPLE.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       miLISTA.imprimir(); 
     }
 }
