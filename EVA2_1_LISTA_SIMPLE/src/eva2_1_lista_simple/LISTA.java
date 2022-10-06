@@ -109,7 +109,49 @@ public class LISTA {
             throw new Exception(pos + " no es una posicion valida en la lista");
             
         } else{
-            
+            //PENSAR EN QUE PUEDE SALIR MAL
+         if(cantNODOS==1){
+             vaciarLISTA();
+         } else{
+             //borrar el primer nodo
+             if(pos==0){
+                 inicio = inicio.getSiguiente();
+             //borrar el nodo intermedio     
+              }else{
+                 NODO temp=inicio;
+                     int cont=0;
+                     while(cont < (pos - 1)){
+                        temp=temp.getSiguiente();
+                        cont++;     
+            }
+                     //ya estoy en modo previo
+                     NODO objSig=temp.getSiguiente();
+                     temp.setSiguiente(temp.getSiguiente().getSiguiente());
+                     if(pos== (cantNODOS - 1)){ //RECONECTAR A FIN
+                     fin=temp;
+            }     
+          }
         }
+      }
     }
-}
+    public int obtenerValorEn(int pos) throws Exception{
+        int cantNODOS = tamaLISTA();
+        //QUE DEBEMOS HACER?  INSERTAR EN UNA POSICION NO VALIDA
+        
+        if(pos < 0){ //POSICIONES NEGATIVAS
+            throw new Exception("No puede insertarse un nodo en una posicion negativa");
+        } else if(pos>=cantNODOS) { //POSICIONES MAYORES A LA CANTIDAD DEL ELEMENTOS
+            throw new Exception(pos + " no es una posicion valida en la lista");
+            
+        } else{
+         NODO temp=inicio;
+                     int cont=0;
+                     while(cont < (pos - 1)){
+                        temp=temp.getSiguiente();
+                        cont++;
+             }
+         }
+      }
+    }
+    
+
